@@ -10,7 +10,7 @@ const app = express();
 require('./lib/passport'); 
 
 // settings
-app.set('port',process.env.POR || 8090); 
+app.set('port',process.env.POR || 3000); 
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 
