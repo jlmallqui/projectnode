@@ -1,10 +1,10 @@
 const express = require('express');
 const morgan = require('morgan'); 
 const path = require('path');  
-const session = require('express-session');  
-const {configPG} = require('./dbserver/keys');   
-const passport = require('passport');
-const {SECRET_KEY} = require('./dbserver/keys');
+// const session = require('express-session');  
+/* const {configPG} = require('./dbserver/keys');   
+const passport = require('passport'); */
+//nconst {SECRET_KEY} = require('./dbserver/keys');
 // inicializaciones
 const app = express();
 require('./lib/passport'); 
@@ -14,14 +14,14 @@ app.set('port',process.env.POR || 8090);
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 
-var pg = require('pg')
+// var pg = require('pg')
  
-const pgSession = require('express-pg-session')(session);
+//const pgSession = require('express-pg-session')(session);
  
 
-var pgPool = new pg.Pool(configPG);
+//var pgPool = new pg.Pool(configPG);
 
-app.use(session({
+/* app.use(session({
   store: new pgSession({
     pool : pgPool,                // Connection pool
     tableName : 'sessions'   // Use another table-name than the default "session" one
@@ -32,20 +32,20 @@ app.use(session({
   saveUninitialized: true,
   cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 } // 30 days
 }));
- 
+  */
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
-app.use(passport.initialize());
-app.use(passport.session());
+/* app.use(passport.initialize());
+app.use(passport.session()); */
  
-passport.serializeUser(function(user, done) {
+/* passport.serializeUser(function(user, done) {
   done(null, user);
 });
 
 passport.deserializeUser(function(user, done) {
   done(null, user);
-});
+}); */
 
 
 

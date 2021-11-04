@@ -1,4 +1,4 @@
-const {Client,Pool} = require('pg');
+/* const {Client,Pool} = require('pg');
 const {promisify} = require('util');
 const { configPG } = require('./keys');
 
@@ -30,4 +30,4 @@ conexion_pool.on('error', (err, client) => {
 
 
 
-module.exports = conexion_pg , conexion_pool;
+module.exports = conexion_pg , conexion_pool; */
