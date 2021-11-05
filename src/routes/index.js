@@ -9,7 +9,7 @@ const conexion = require('../dbserver/dbproduccion');
  
 router.get('/clientes', async (req, res) => {
     try {             
-        const users =  await conexion.query('select * from devpoderes.cliente_listar()');
+        const users =  await conexion.query('select * from sistemas.cliente_listar()');
         console.log(users.rows);
         res.status(200).render('clientes',{data:users.rows});
     } catch (error) {
