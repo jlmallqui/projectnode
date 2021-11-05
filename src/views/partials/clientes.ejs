@@ -1,0 +1,40 @@
+<%- include ('partials/_header'); -%>
+
+
+
+    <h1>LISTADO DE CLIENTES CON AXIOS: </h1> 
+    
+   <div class="container">
+       <table class="table - table-bordered table-hover">
+           <thead>
+                <th class="d-none d-md-table-cell">ID</th>   
+                <th> TIPO</th>
+                <th> NUMERO</th>
+                <th> NOMBRES</th>                           
+                <th class="d-none d-md-table-cell" > EMAIL</th>
+                <th class="d-none d-md-table-cell" > PHONE</th>
+           </thead>
+           <tbody>
+               <% if (data) { %>
+            <% for (var i =0; i < data.length;  i++ ) { %>
+                <tr class="cursor-pointer">
+                    <td class="d-none d-md-table-cell"> <%= i + 1 %> </td>
+                    <td> <%= data[i].pertide %> </td>
+                    <td> <%= data[i].peridenro %> </td>
+                    <td> <%= data[i].pernom %> </td>
+                    <td  class="d-none d-md-table-cell" > <%= data[i].peremail %> </td>
+                    <td class="d-none d-md-table-cell" > <%= data[i].pertlf %> </td>
+                </tr>
+                <br/>   
+                
+                <% } %>
+                <% } %>
+
+           </tbody>
+       </table>
+   </div>
+
+
+
+<%- include ('partials/_footer'); -%>
+

@@ -1,20 +1,20 @@
 module.exports = {
 
-    database:{
+    databaseMysql:{
         host:'localhost',
         user:'root',
         password:'root',
         database:'database_links'
     },
 
-    configPG:{         
+    configLocalhost:{         
         user:'postgres',
         host:'localhost',
         password:'postgres',
         database:'links',
         port:5432,
     },
-    configPG22:{         
+    configPGBK:{         
         host:'72.167.54.61',
         user:'devuser',
         password:'pgDEVus3r$',
@@ -22,10 +22,10 @@ module.exports = {
         port:5432,
     },
     configProduccion:{
-        host:'72.167.54.61',
-        user:'devuser',
-        password:'pgDEVus3r$',
-        database:'dbdeveloper',
+        host:'206.81.14.59',
+        user:'postgres',
+        password:'postgres',
+        database:'developer',
         port:5432,
     },
 
