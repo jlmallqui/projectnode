@@ -1,0 +1,43 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+footer{
+    background: #108d70 !important;
+    color: white;
+}
+
+.fondo{    
+    height: 100vh;
+    width: 100vw; 
+}
+
+.navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.btnLogin{
+    background:#108d70;
+    color: white;
+    border-radius: 5px;
+    border:1px solid #137c64 ;
+    
+}
+.btnLogin:hover{
+    background: white ;
+    color: #108d70;
+    border-radius: 5px;
+}
+
+
+.bloque-transparente{    
+    background: rgb(255 255 255 / 80%);
+    border-radius: 5px;
+}
+
+
+
+
+
+

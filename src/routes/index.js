@@ -4,7 +4,17 @@ const conexion = require('../dbserver/dbproduccion');
 
 
  router.get('/',(req, res) => {
-     res.render('index.ejs'); 
+     try {
+        var todayDate = new Date().toISOString().slice(0, 10);
+        console.log(todayDate);
+    
+         const today =  new Date().toLocaleDateString();
+         console.log(today);
+         res.status(200).render('index.ejs',{today}); 
+     } catch (error) {
+         console.log(error);
+     }
+    
      });
  
 router.get('/clientes', async (req, res) => {
