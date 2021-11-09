@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
     <link href="./css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" type="text/css" href="./css/sistemasmj.css"  /> 
-
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="./js/sistemasmj.js"></script> 
     <title>SistemasMJ</title>
 </head>
-<body>
-        
-    <section id="home" style="height: 100vh;" >
-        
-        <div class="position-absolute">
+<body>         
+    <section id="home" style="height: 100vh;" >        
+        <div class="position-absolute" style="width: 100%;">
             <img  class="fondo" src="../img/sistemasmj/background.jpg"   alt="...">
         </div>
 
@@ -31,7 +30,10 @@
                         <a class="nav-link" href="/">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">Tecnologias</a>
+                        <a class="nav-link" href="#about">Sobre Mi</a>
+                    </li>                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tecnologias">Tecnologias</a>
                     </li>
                     
                     <li class="nav-item">
@@ -45,7 +47,7 @@
                 </div>
             </nav>
             
-            <div class="pt-5">
+            <div class="pt-5 ap1" style="display:none;">
                 <div class="col-md-4 bloque-transparente ms-5 ps-1">
                     <div class="p-4">
                         <h4>Jose Mallqui</h4> 
@@ -63,9 +65,42 @@
         
     </section>
 
-
-
+    <div class="container-fliud trance"> 
+    </div>
     <section id="about">
+        <div class="container"> 
+            <div class="row "> 
+         
+                <div class=" col-sm-12 col-md-12 mt-3 mb-5" style="border: 1px solid #080808;">
+                </div>
+                    
+                    <div class="col-md-8 d-flex">
+                        <h2 class="d-inline">Sobre&nbsp;Mi</h2> <p class="aboutp"> <br> Soy Jose Mallqui, un apasionado por el desarrollo de sitios web. <br>
+                            Diseño y desarrollo siempre con la finalidad de obtener un sistema para que lo necesita.
+                        </p>
+
+                    </div>
+
+                    <div class="col-md-4 d-flex">
+                        <img  class="img-thumbnail img-perfil mx-auto" src="../img/sistemasmj/perfil.jpg"   alt="...">                    
+
+                    </div>
+
+                    <div class="col-sm-12 col-md-8">
+                        <p >Mi objetivo principal es lograr que las personas puedan conectar con más clientes, marcas o negocios utilizando medios digitales de una manera eficaz, sencilla y amigable, esto lo logro creando sitios webs faciles de usar, amigables
+                            construidos con las mejores prácticas y escalables en el tiempo.</p>
+                    </div>
+                    
+                    <div class="col-sm-12 col-md-4">
+                       
+                    </div> 
+                   
+            </div> 
+        </div>
+    </section> 
+
+
+    <section id="tecnologias">
         <div class="container"> 
             <div class="row "> 
          
@@ -83,15 +118,10 @@
                     <div class="col-sm-6 col-md-4">
                         <h5>Java</h5>  
                         <p><br/p>
-                    </div>
+                    </div> 
                     
                     <div class="col-sm-6 col-md-4">
-                        <h5>Nodejs</h5>  
-                        <p><br/p>
-                    </div>
-                    
-                    <div class="col-sm-6 col-md-4">
-                        <h5>Express</h5>
+                        <h5>Genexus</h5>
                         <p><br/p>
                     </div>
                     
@@ -101,7 +131,7 @@
                     </div>
                     
                     <div class="col-sm-6 col-md-4">
-                        <h5>React</h5>
+                        <h5>Angular</h5>
                         <p><br/p>
                     </div> 
                     
@@ -109,6 +139,11 @@
                         <h5>JWT</h5>
                         <p><br/p>
                     </div> 
+                    
+                    <div class="col-sm-6 col-md-4">
+                        <h5>Nodejs</h5>  
+                        <p><br/p>
+                    </div>
 
                     <div class="col-sm-6 col-md-4">
                         <h5>Mysql</h5>

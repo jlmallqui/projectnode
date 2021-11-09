@@ -1,6 +1,13 @@
-body::-webkit-scrollbar {
-    display: none;
+body{
+    scrollbar-color: yellow #800080;
+    scrollbar-width: 10px;
 }
+
+.container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
 
 footer{
     background: #108d70 !important;
@@ -9,7 +16,7 @@ footer{
 
 .fondo{    
     height: 100vh;
-    width: 100vw; 
+    width: 100%; 
 }
 
 .navbar {
@@ -30,6 +37,23 @@ footer{
     border-radius: 5px;
 }
 
+
+.trance{
+    height: 50px;
+    background-image: linear-gradient(#c4c4c4  0,#ffffff 100%);
+}
+
+.aboutp{
+    margin-left: 50px;
+}
+.aboutp-negtita{
+    color: black;
+    font-weight: 900;
+}
+
+.img-perfil{
+    height: 200px;
+}
 
 .bloque-transparente{    
     background: rgb(255 255 255 / 80%);
