@@ -1,4 +1,4 @@
-document.getElementById('inicio').value = new Date().toDateInputValue();
+//document.getElementById('inicio').value = new Date().toDateInputValue();
 
 function updatefecha(e){
     const fechaFinal = document.getElementById('fin');    

@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link href="./css/bootstrap.min.css" rel="stylesheet" >
+
     <link rel="stylesheet" type="text/css" href="./css/sistemasmj.css"  /> 
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="./js/sistemasmj.js"></script> 
@@ -39,14 +41,69 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contacto</a>
                     </li>
-                    </ul>
-                    <form class="d-flex">              
-                    <button class="btn btnLogin" type="submit">Clientes</button>
-                    </form>
+                    </ul>           
+                  
+                    <!-- Button trigger modal -->
+                        <button type="button" class="btn btnLogin" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Clientes
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Solo acceso clientes</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <label for="usuario" class="form-label">Usuario</label>
+                                    <input type="text" id="usuario" class="form-control" > 
+                                    <label for="password" class="form-label">descripcion</label>
+                                    <input type="descripcion" id="descripcion" class="form-control">
+                                
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" id="btnlogin" class="btn btnLogin">Iniciar Sesion</button>
+                                </div>
+
+                                <script>
+                                    const btnlogin = document.querySelector('#btnlogin');
+    
+
+    btnlogin.addEventListener('click',() =>{ 
+        loadtest();
+    });
+
+    function loadtest(){
+        fetch('/api/users/listado', {method:'GET'})
+        .then(res=> res.json())
+        .then (data=>{
+            const clientes = document.querySelector('#listado-clientes');
+            let html = '';           
+            data.forEach(cliente => {
+                html += `<div> ${cliente.pernom} </div>`
+            });
+            alert(html);
+            clientes.innerHTML = html;
+        })
+    }
+
+
+
+                                </script>
+                            </div>
+                            </div>
+                        </div> 
                 </div>
                 </div>
             </nav>
             
+ 
+
+
             <div class="pt-5 ap1" style="display:none;">
                 <div class="col-md-4 bloque-transparente ms-5 ps-1">
                     <div class="p-4">
@@ -191,7 +248,6 @@
     <footer class="card text-center mt-5">
         <p></p>
         <p>© 2021 | Diseñado por: Jose Mallqui </p> 
-        
     </footer>
 
 

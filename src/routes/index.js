@@ -18,6 +18,7 @@ const conexion = require('../dbserver/dbproduccion');
      });
  
 router.get('/clientes', async (req, res) => {
+    console.log('entro al get');
     try {             
         const users =  await conexion.query('select * from sistemas.cliente_listar()');
         console.log(users.rows);
@@ -28,5 +29,17 @@ router.get('/clientes', async (req, res) => {
     }
 });
     
+
+router.get('/categorias', async (req, res) => { 
+    try {             
+        const categorias =  await conexion.query(' select * from "sistemas"."categorias_listar"()'); 
+        //res.json(categorias.rows);
+        res.status(200).render('categorias',{data:categorias.rows});
+    } catch (error) {
+        console.log('error');
+        return res.status(401).json(error);
+    }
+});
+
    
     module.exports = router;

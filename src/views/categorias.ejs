@@ -1,0 +1,72 @@
+<%- include ('partials/_header'); -%>
+
+
+
+    <h1>LISTADO DE CLIENTES CON AXIOS: </h1> 
+    <form action="">
+        <div class="bg-white col-md-6">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Solo acceso clientes</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label for="usuario" class="form-label">Usuario</label>
+                <input type="text" id="usuario" class="form-control" > 
+                <label for="password" class="form-label">descripcion</label>
+                <input type="descripcion" id="descripcion" class="form-control">
+            
+    
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <input type="submit" id="add_categoria" class="btn btn-primary" value="Agregar">
+                <!-- <button type="button" id="btnlogin" class="btn btn-primary">Agregar123</button> -->
+            </div>
+        </div>
+
+    </form>
+    
+
+
+    
+   <div class="container">
+     
+     
+
+    <ul>
+        <% data.forEach(function(item) { %>
+            <li> Nombre: <%= item.descripcion %>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Descripcion larga: <%= item.descripcionlarga %></li>
+        <% }); %> 
+
+    </ul>
+
+    
+       <table class="table - table-bordered table-hover">
+           <thead>
+                <th class="d-none d-md-table-cell">ID</th>    
+                <th> Codsigo </th>
+                <th> Descripcion </th>
+                <th> Descripcion Larga</th>
+           </thead>
+           <tbody>
+               <% if (data) { %>
+            <% for (var i =0; i < data.length;  i++ ) { %>
+                <tr class="cursor-pointer">
+                    <td> <%= i + 1 %> </td>
+                    <td> <%= data[i].id %> </td>
+                    <td> <%= data[i].descripcion %> </td>
+                    <td> <%= data[i].descripcionlarga %> </td> 
+                </tr>
+                <br/>   
+                
+                <% } %>
+                <% } %>
+
+           </tbody>
+       </table>
+   </div>
+
+
+
+<%- include ('partials/_footer'); -%>
+
