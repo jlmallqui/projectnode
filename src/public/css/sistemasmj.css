@@ -17,6 +17,9 @@ footer{
 .fondo{    
     height: 100vh;
     width: 100%; 
+    background-image: url("../img/sistemasmj/background.jpg") ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .navbar {
@@ -62,6 +65,11 @@ footer{
 
 
 
+@media screen and (max-width: 600px) {
+    .fondo{
+        background-image: url("../img/sistemasmj/background-movil.png") ;
+    }
 
+}
 
 

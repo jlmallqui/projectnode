@@ -31,10 +31,6 @@ $(document).ready(function() {
     $("#add_categoria").on('click', function(event){
         event.preventDefault();
         event.stopPropagation();
-        $.ajax({
-            url:
-
-        })
         
 
 
